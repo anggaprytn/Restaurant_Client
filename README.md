@@ -5,8 +5,8 @@
 Restaurant Point of Sale is a mobile application to make it easier for us to order food menus in restaurants, with this application no longer need to queue at the cashier, so that ordering menus and payments become more efficient.
 
 ## Screenshots
-
-<p float="left">
+<center>
+<p>
  <img src="https://user-images.githubusercontent.com/20864493/65620116-78e39480-dfeb-11e9-9034-cdad2bfaa3b5.png" width="189" height="400"/>
  <img src="https://user-images.githubusercontent.com/20864493/65620084-708b5980-dfeb-11e9-8146-81a9cd8a26c7.png" width="189" height="400"/>
  <img src="https://user-images.githubusercontent.com/20864493/65620087-7123f000-dfeb-11e9-8cd9-7a3c636636b2.png" width="189" height="400"/>
@@ -23,7 +23,7 @@ Restaurant Point of Sale is a mobile application to make it easier for us to ord
  <img src="https://user-images.githubusercontent.com/20864493/65620108-75e8a400-dfeb-11e9-952b-c0b69a5dce5a.png" width="189" height="400"/>
  
 </p>
-
+</center>
 
 ## Features
 
@@ -97,5 +97,5 @@ npm start
 [![download](https://camo.githubusercontent.com/a9c59dcbf62ec123e8bb099fb473ad30554d70e6/68747470733a2f2f69312e77702e636f6d2f61706b6d6f6473696f732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31322f446f776e6c6f61642d496e66696e6974652d44657369676e2d332e342e31302d41706b2e706e67 "Download")](https://drive.google.com/file/d/1f0N4hvzIQ1oD3RXNDKIfGxjyz3jUg2lq/view?usp=sharing)
 
 ## Presentation
-[![download]("https://www.freeiconspng.com/uploads/presentation-icon-5.png" width="200" height="200")](https://drive.google.com/open?id=14zjBAuAUmwS3fIsZIgrP-LhxciYOl6n9)
+<img src="https://www.freeiconspng.com/uploads/presentation-icon-5.png" width="180" height="180" href="https://drive.google.com/open?id=14zjBAuAUmwS3fIsZIgrP-LhxciYOl6n9"/>
 
