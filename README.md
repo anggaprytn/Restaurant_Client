@@ -97,5 +97,5 @@ npm start
 [![download](https://camo.githubusercontent.com/a9c59dcbf62ec123e8bb099fb473ad30554d70e6/68747470733a2f2f69312e77702e636f6d2f61706b6d6f6473696f732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31322f446f776e6c6f61642d496e66696e6974652d44657369676e2d332e342e31302d41706b2e706e67 "Download")](https://drive.google.com/file/d/1f0N4hvzIQ1oD3RXNDKIfGxjyz3jUg2lq/view?usp=sharing)
 
 ## Presentation
-[![download](https://www.freeiconspng.com/uploads/presentation-icon-5.png "Download")](https://drive.google.com/open?id=14zjBAuAUmwS3fIsZIgrP-LhxciYOl6n9)
+[![download]("https://www.freeiconspng.com/uploads/presentation-icon-5.png" width="200" height="200")](https://drive.google.com/open?id=14zjBAuAUmwS3fIsZIgrP-LhxciYOl6n9)
 
