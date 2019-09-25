@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { View, Image, StyleSheet, StatusBar, TouchableOpacity, TouchableHighlight } from "react-native";
 import { Container, Content, Button, H3, Text } from 'native-base';
 import Modal from "react-native-modal";
+import { connect } from "react-redux";
+
+import { truncateOrders } from "../_actions/orders";
 
 import { theme, container, formGroup, centeredItems, pt5, textCenter, borderRadius } from "../constants/styles";
 
@@ -18,6 +21,7 @@ class Finished extends Component {
   }
   
   _handleNavigate = () => {
+    this.props.dispatch(truncateOrders());
     this.props.navigation.navigate('Splash');
   }
 
@@ -43,15 +47,15 @@ class Finished extends Component {
         <Content style={[container]}>
           <StatusBar barStyle = "dark-content" backgroundColor="white"/>
           <View style={[centeredItems, {height: theme.dimensions.height}]}>
-            {/* <View style={{flex: 10}}>
+            <View style={{ height: 200,backgroundColor: 'white'}}>
               <Image 
-                source={require('../assets/images/thanks.png')} 
-                style={styles.imageLogo}
+                source={require('../assets/images/thankyou.gif')} 
+                style={{width: '100%', height: '100%'}}
               />
-            </View> */}
+            </View>
         
             <View style={[formGroup, pt5]}>
-              <Text style={[textCenter,{fontFamily: 'Montserrat-Regular', fontSize: 28}]}>Thank You :)</Text>
+           
               <Text style={[textCenter,{fontFamily: 'Montserrat-Regular', fontSize: 19, marginTop: 5, color: '#a0a0a0'}]}>For your order</Text>
             </View>
         
@@ -63,7 +67,7 @@ class Finished extends Component {
                 <Text style={{color: 'black', fontFamily: 'Montserrat-Regular'}} uppercase={false}>Call Waitress</Text>
               </Button>
               <Button block onPress={this.toggleModal4} style={{backgroundColor:"#febb40", width: 200, borderRadius: 20}}>
-                <Text style={{color: 'black', fontFamily: 'Montserrat-Regular'}} uppercase={false}>Go Home</Text>
+                <Text style={{color: 'black', fontFamily: 'Montserrat-Regular'}} uppercase={false}>Input Table</Text>
               </Button>
             </View>
           </View>
@@ -182,7 +186,13 @@ class Finished extends Component {
   }
 }
 
-export default Finished;
+const mapStateToProps = (state) => {
+  return {
+    orders: state.orders.orders
+  }
+}
+
+export default connect(mapStateToProps)(Finished);
 
 const styles = StyleSheet.create({
   container: {

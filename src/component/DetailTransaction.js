@@ -9,7 +9,9 @@ class DetailTransaction extends Component {
     const {subtotal, discount, service, tax, total} = this.props.data;
     
     return (
+      
       <View style={{backgroundColor: '#f6f6f6'}}>
+        
         <View style={[floatLeft, {borderBottomColor: '#e2e2e2', borderBottomWidth: 1, paddingVertical: 5}]}>
           <View style={{flex: 1}}>
             <Text style={{fontFamily: 'OpenSans', fontSize: 15}}>Subtotal</Text>

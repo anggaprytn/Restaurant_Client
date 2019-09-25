@@ -81,9 +81,18 @@ class MenuItem extends Component {
                 <View style={{flex: 1, backgroundColor: 'white', alignItems: 'flex-end'}}>
                   {isStared ? 
                     (
-                    <TouchableOpacity>
-                      <Icon name="md-heart" style={{color: "#f20c0a", marginRight: 15, marginTop: 5}} />
-                    </TouchableOpacity>
+                    <View>
+                      <TouchableOpacity>
+                        <Icon name="md-heart" style={{color: "#f20c0a", marginRight: 15, marginTop: 5}} />
+                      </TouchableOpacity>
+                      <View style={{position: 'absolute', top: 0, left: '-380%'}}>
+                      <Image 
+                        source={require('../assets/images/promo.gif')} 
+                        style={{width: 69,height: 30}}
+                        resizeMode="contain"
+                       />	
+                      </View>
+                    </View>
                     ) : (
                     <TouchableOpacity>
                       <Icon name="md-heart" style={{color: "#e0e5e5", marginRight: 15, marginTop: 5}} />
@@ -120,16 +129,33 @@ class MenuItem extends Component {
           style={styles.bottomModal}
           isVisible={this.state.isModalVisible1}>
 
-          <View style={{height: '85%', backgroundColor: 'white', borderTopLeftRadius: 15, borderTopRightRadius: 15}}>
-            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+          <View style={{flex: 0.9, backgroundColor: 'white', borderTopLeftRadius: 15, borderTopRightRadius: 15}}>
+            <View style={{alignItems: 'center', backgroundColor: 'white', height: 400, borderTopLeftRadius: 15, borderTopRightRadius: 15}}>
               <View style={{backgroundColor: '#dddddd', height: 3, width: 50, borderRadius: 5, marginTop: 8}}></View>
               <View style={{backgroundColor: '#dddddd', height: 3, width: 50, borderRadius: 5, marginTop: 3}}></View>
-              <Image source={{ uri: image }} style={{height: 350, width: 350, alignSelf: 'center', borderRadius: 5, marginTop: 35}} />
-              
+              {isStared ? 
+                    (
+                    <View>
+                      <View style={{position: 'absolute', top: 10, left: '-48.5%', zIndex: 1}}>
+                      <Image 
+                        source={require('../assets/images/promo.gif')} 
+                        style={{width: 137,height: 60}}
+                        resizeMode="contain"
+                       />	
+                      </View>
+                    </View>
+                    ) : (
+                    <View/>
+                    )}
+              <View style={{backgroundColor: 'white', flex: 1, width: '95%'}}>
+                <Image source={{ uri: image }} style={{width: "88%", height: "88%", alignSelf: 'center', borderRadius: 5, marginTop: 35,  aspectRatio: 1.04}} />
+              </View>
             </View>
+            
+            
             <StatusBar barStyle = "light-content" backgroundColor="black"/>
-            <Text style={{fontSize: 18, marginTop: 15, marginLeft: 20, fontFamily:'OpenSans-Semibold'}}>{name}</Text>
-            <Text style={{fontSize: 18, marginTop: 15, marginLeft: 20, fontFamily: 'OpenSans', color: '#646464'}}>Rasanya {name} enak banget jadi tambah laper</Text>
+            <Text style={{fontSize: 18, marginTop: 5, marginHorizontal: 20, fontFamily:'OpenSans-Semibold'}}>{name}</Text>
+            <Text style={{fontSize: 18, marginTop: 15, marginHorizontal: 20, fontFamily: 'OpenSans', color: '#646464'}}>Rasanya {name} enak banget jadi tambah laper</Text>
             <View style={{bottom:60, position: 'absolute', width: '90%', marginHorizontal: 20, flexDirection:'row', justifyContent: 'space-between', backgroundColor: 'white', flex: 1, borderTopWidth: 1, borderTopColor: 'black', borderStyle: 'dashed', borderTopColor: '#ececec'}}>
               <Text style={{fontSize: 18, fontFamily:'OpenSans-Semibold'}}>Dish Price</Text>
               <Text style={{fontSize: 18, fontFamily:'OpenSans-Semibold'}}>{convertToRupiah(price)}</Text>

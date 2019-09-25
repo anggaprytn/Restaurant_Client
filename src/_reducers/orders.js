@@ -41,6 +41,12 @@ const orders = (state = initialState, action) => {
         isLoading: false,
         message: 'Unable to send data'
       };
+
+    case 'TRUNCATE_ORDERS': 
+      return {
+        ...state,
+        orders: []
+      }
   
     default:
       return state;

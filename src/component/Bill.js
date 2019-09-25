@@ -95,7 +95,7 @@ class Bill extends Component {
     return (
       
       <Container style={{backgroundColor: 'white', borderRadius: 15}}>
-        <Header style={{borderTopLeftRadius: 15, borderTopRightRadius: 15, backgroundColor: '#f3f3f3'}} androidStatusBarColor={theme.color.grey}>
+        <Header style={{borderTopLeftRadius: 15, borderTopRightRadius: 15, backgroundColor: '#f3f3f3', height: 50}} androidStatusBarColor={theme.color.grey}>
           <Body>
             <Text style={{fontFamily: 'OpenSans-Semibold', fontSize: 17}}>Bills</Text>
           </Body>
@@ -105,6 +105,30 @@ class Bill extends Component {
             </TouchableOpacity>
           </Right>
         </Header>
+        <View style={{height: 1, backgroundColor:'#d5d5d5'}}/>
+        <View style={{height: 30, flexDirection: 'row'}}>
+          <View style={{flex: .9, backgroundColor: '#f3f3f3', justifyContent: 'center'}}>
+            <Text style={{fontFamily: 'OpenSans-Semibold', marginLeft: 4}}>
+              Status
+            </Text>
+          </View>
+          <View style={{flex: 1.9, backgroundColor: '#f3f3f3', justifyContent: 'center'}}>
+            <Text style={{fontFamily: 'OpenSans-Semibold'}}>
+              Name
+            </Text>
+          </View>
+          <View style={{flex: .5, backgroundColor: '#f3f3f3', justifyContent: 'center', alignItems: 'center'}}>
+            <Text style={{fontFamily: 'OpenSans-Semibold'}}>
+              Qty
+            </Text>
+          </View>
+          <View style={{flex: 1, justifyContent: 'center', backgroundColor: '#f3f3f3', alignItems: 'center'}}>
+            <Text style={{fontFamily: 'OpenSans-Semibold'}}>
+              Price
+            </Text>
+          </View>
+        </View>
+        <View style={{height: 1, backgroundColor:'#d5d5d5'}}/>
         <View style={{flex: 1, borderRadius: 15}}>
           <View style={[container, {flex: 2.7}]}>
             {/* {this.props.isLoading && (

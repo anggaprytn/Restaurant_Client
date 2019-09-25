@@ -9,19 +9,23 @@ class OrderList extends Component {
     const {data: {status, menu, qty, price}} = this.props;
     return (
       <View style={[floatLeft, styles.listItem]}>
-        <View style={{flex: 1.6, backgroundColor: 'white', justifyContent: 'center'}}>
+        <View style={{flex: .9, backgroundColor: 'white', justifyContent: 'center'}}>
           {status ? (
-            <Text style={[uppercase, styles.textSent, {fontFamily: 'OpenSans-Semibold', fontSize: 16}]}>Sent</Text>
+            <Text style={[uppercase, styles.textSent, {fontFamily: 'OpenSans-Semibold', fontSize: 16}]} numberOfLines={1}>Sent</Text>
           ) : (
-            <Text style={[uppercase, {color: '#ff6528', fontFamily: 'OpenSans-Semibold', fontSize: 16}]}>Waiting</Text>
+            <Text style={[uppercase, {color: '#ff6528', fontFamily: 'OpenSans-Semibold', fontSize: 16}]} numberOfLines={1}>Waiting</Text>
           )}
         </View>
-        <View style={{flex: 3, backgroundColor: 'white'}}>
+        <View style={{flex: 1.9, backgroundColor: 'white'}}>
           <Text style={[uppercase, { fontFamily: 'OpenSans-Semibold'}]} numberOfLines={1}>{menu.name}</Text>
-          <Text style={{fontFamily: 'OpenSans-Light'}}>{convertToRupiah(price)} X {qty}</Text>
+        
         </View>
-        <View style={{flex: 2, justifyContent: 'center'}}>
-          <Text style={[textRight, {fontFamily: 'Lato-Medium'}]}>{convertToRupiah(price * qty)}</Text>
+        <View style={{flex: .5, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
+          
+          <Text style={{fontFamily: 'OpenSans'}} numberOfLines={1}>{qty}</Text>
+        </View>
+        <View style={{flex: 1, justifyContent: 'center', backgroundColor: 'white'}}>
+          <Text style={[textRight, {fontFamily: 'Lato-Medium'}]} >{convertToRupiah(price * qty)}</Text>
         </View>
       </View>
     )

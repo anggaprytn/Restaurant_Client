@@ -28,3 +28,9 @@ export const updateStatusOrders = (header) => {
     payload: axios.patch(`${API_URL}/api/v1/orders/`, {}, header)
   }
 }
+
+export const truncateOrders = () => {
+  return {
+    type: 'TRUNCATE_ORDERS'
+  }
+}
